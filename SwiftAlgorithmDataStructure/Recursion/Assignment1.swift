@@ -8,36 +8,61 @@
 
 import Foundation
 
-func evaluate(_ calculate: String) {
-    print(evaluateHelper(calculate))
+func evaluate(_ expr: String) -> Int {
+    var i = 0
+    return evaluateHelper(expr, &i)
 }
 
-func evaluateHelper(_ calculate: String, _ res: Int = 0) {
-    if (calculate.count == 0) {
-        print("count:\(calculate.count)/calc:\(calculate)/res:\(res)")
-        print(res)
+func evaluateHelper(_ expr: String, _ i: inout Int) -> Int {
+    if Character(expr[i]).isNumber {
+        return Int(expr[i])!
     } else {
-        for i in 0..<calculate.count {
-            let x = calculate[i]
-            let isNumber = CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: x))
-            var y = ""
-            if (i == 0) {
-                y = ""
-            } else {
-                y = calculate[i-1]
-            }
-            
-            if (y == "+") {
-                evaluateHelper(calculate[i+1, calculate.count], res + Int(x)!)
-            } else if (y == "*") {
-                evaluateHelper(calculate[i+1, calculate.count], res * Int(x)!)
-            } else {
-                if (isNumber) {
-                    evaluateHelper(calculate[i+1, calculate.count], Int(x)!)
-                } else if (!isNumber) {
-                    evaluateHelper(calculate[i+1, calculate.count], res)
-                }
-            }
+        i += 1 //skip when character is (
+        let left = evaluateHelper(expr, &i) //when it's an expression or number
+        i += 1
+        let op = expr[i] //to return the operation + or *
+        i += 1
+        let right = evaluateHelper(expr, &i) //when it's an expression or number
+        i += 1 //to skip when character is )
+        
+        if (op == "+") {
+            return left + right
+        } else {
+            return left * right
+        }
+    }
+}
+
+//func evaluate(_ calculate: String) -> Int {
+//    print(evaluateHelper(calculate))
+//}
+//
+//func evaluateHelper(_ calculate: String, _ res: Int = 0) {
+//    if (calculate.count == 0) {
+//        print("count:\(calculate.count)/calc:\(calculate)/res:\(res)")
+//        print(res)
+//    } else {
+//        for i in 0..<calculate.count {
+//            let x = calculate[i]
+//            let isNumber = CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: x))
+//            var y = ""
+//            if (i == 0) {
+//                y = ""
+//            } else {
+//                y = calculate[i-1]
+//            }
+//
+//            if (y == "+") {
+//                evaluateHelper(calculate[i+1, calculate.count], res + Int(x)!)
+//            } else if (y == "*") {
+//                evaluateHelper(calculate[i+1, calculate.count], res * Int(x)!)
+//            } else {
+//                if (isNumber) {
+//                    evaluateHelper(calculate[i+1, calculate.count], Int(x)!)
+//                } else if (!isNumber) {
+//                    evaluateHelper(calculate[i+1, calculate.count], res)
+//                }
+//            }
             
             
             
@@ -59,8 +84,7 @@ func evaluateHelper(_ calculate: String, _ res: Int = 0) {
 //                    evaluateHelper(calculate[i+1,calculate.count], Int(x)!, "")
 //                }
 //            }
-        }
-    }
-}
+//        }
+//    }
+//}
 
-// evaluate("2+3")

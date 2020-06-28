@@ -48,6 +48,10 @@ func printBinary(_ number: Int) {
 func reverseLines(_ line: Int) {
   let contents = try! String(contentsOfFile: "/Users/leandro998/Documents/GitHub.noSync/iOS-Guided-Projects/SwiftAlgorithmDataStructure/SwiftAlgorithmDataStructure/Recursion/story.txt")
   let sentences = contents.split(separator: "\n")
-  print(sentences)
   // MARK: - YOUR RECURSIVE CODE GOES HERE...
+    if (line < sentences.count) {
+        reverseLines(line + 1)
+        print(sentences[line])
+    }
 }
+
