@@ -21,11 +21,14 @@ func fileSystemCrawler(at url: URL, _ index: Int, _ tab: String, _ nFolders: ino
     //insert the sum of files and folders when finish processing:
     if index + 1 > content.count { return [nFolders, nFiles] }
     print((index + 1 == content.count) ? "\(tab[tab.index(tab.startIndex, offsetBy: 0)..<tab.index(tab.startIndex, offsetBy: tab.count - 2)])└─ \(content[index].lastPathComponent)":"\(tab) \(content[index].lastPathComponent)")
+    //if the extension is empty it's a folder, else is a file:
     if content[index].pathExtension != ""{ nFiles = nFiles + 1 }
     else{ nFolders = nFolders + 1 }
+    //if the content is a folder it should keep going down, so we call the function again changing the tab to |
     if content[index].hasDirectoryPath {
         fileSystemCrawler(at: content[index].absoluteURL, 0, "\t│" + tab, &nFolders, &nFiles)
     }
+    //call recursive the function until we have the base case of index+1 > content.count
     return fileSystemCrawler(at: url, index + 1, tab, &nFolders, &nFiles)
 }
 
@@ -75,6 +78,17 @@ func fileSystemCrawler(at url: URL, _ index: Int, _ tab: String, _ nFolders: ino
 //
 //}
 
+ 
+ ------how code works on line 23:
+ 
+ print(
+    (index + 1 == content.count) ?
+        "\(tab[tab.index(tab.startIndex, offsetBy: 0)
+            ..<tab.index(tab.startIndex, offsetBy: tab.count - 2)
+              ])└─ \(content[index].lastPathComponent)"
+        :
+        "\(tab) \(content[index].lastPathComponent)"
+       ) //end print
  
  */
 
