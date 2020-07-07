@@ -21,7 +21,8 @@ import Foundation
 //print(bubbleSort([3,6,7,2,1], <))
 //print(selectionSort([3,6,7,2,1], <))
 var array = [3,6,2,4,1]
-print(quickSort(arr: &array))
+quickSort(arr: &array)
+
 
 //Mini Project -> TreeFiles:
 //fileExistsTest()
