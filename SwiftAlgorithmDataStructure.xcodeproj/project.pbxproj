@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D130DE4524A653A60005B699 /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130DE4424A653A60005B699 /* Backtracking.swift */; };
+		D178A27A24B38AC400A0AB29 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178A27924B38AC400A0AB29 /* Sort.swift */; };
 		D18DEF3224A2612F00DBF009 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18DEF3124A2612F00DBF009 /* main.swift */; };
 		D18DEF3A24A2617900DBF009 /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18DEF3924A2617900DBF009 /* Recursion.swift */; };
 		D18DEF3C24A267B200DBF009 /* String+DPStringTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18DEF3B24A267B200DBF009 /* String+DPStringTool.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		D130DE4424A653A60005B699 /* Backtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtracking.swift; sourceTree = "<group>"; };
+		D178A27924B38AC400A0AB29 /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		D18DEF2E24A2612F00DBF009 /* SwiftAlgorithmDataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlgorithmDataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18DEF3124A2612F00DBF009 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D18DEF3924A2617900DBF009 /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D178A27824B38AB200A0AB29 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				D178A27924B38AC400A0AB29 /* Sort.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
 		D18DEF2524A2612F00DBF009 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 			children = (
 				D18DEF3B24A267B200DBF009 /* String+DPStringTool.swift */,
 				D18DEF3124A2612F00DBF009 /* main.swift */,
+				D178A27824B38AB200A0AB29 /* Sort */,
 				D1B39C0324A53848000E91EE /* MiniProject */,
 				D18DEF3824A2616300DBF009 /* Recursion */,
 			);
@@ -161,6 +172,7 @@
 			files = (
 				D1D6403624A3E79B005F196D /* Assignment1.swift in Sources */,
 				D130DE4524A653A60005B699 /* Backtracking.swift in Sources */,
+				D178A27A24B38AC400A0AB29 /* Sort.swift in Sources */,
 				D1D6403424A3B309005F196D /* ExaustiveSearch.swift in Sources */,
 				D18DEF3C24A267B200DBF009 /* String+DPStringTool.swift in Sources */,
 				D1B39C0B24A5695D000E91EE /* Test1.swift in Sources */,

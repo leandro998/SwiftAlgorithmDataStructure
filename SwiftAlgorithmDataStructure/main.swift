@@ -17,12 +17,15 @@ import Foundation
 //print(evaluate("((2+3)*(2+2))"))
 //print(getDocumentsDirectory())
 //rollDice(3)
-
-
+//print(bubbleSort([3,6,7,2,1], <))
+//print(bubbleSort([3,6,7,2,1], <))
+//print(selectionSort([3,6,7,2,1], <))
+var array = [3,6,2,4,1]
+print(quickSort(arr: &array))
 
 //Mini Project -> TreeFiles:
 //fileExistsTest()
 //fileExistsTest(atPath: "/Users/leandro998/Documents", isDirectory: nil)
-
-numbers = fileSystemCrawler(at: URL(fileURLWithPath: FileManager.default.currentDirectoryPath), 0, "\t├─", &nFiles, &nFolders)
-print("\n\(numbers[0] - 1) directories, \(numbers[1]) files\n")
+//
+//numbers = fileSystemCrawler(at: URL(fileURLWithPath: FileManager.default.currentDirectoryPath), 0, "\t├─", &nFiles, &nFolders)
+//print("\n\(numbers[0] - 1) directories, \(numbers[1]) files\n")
