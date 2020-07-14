@@ -20,9 +20,33 @@ import Foundation
 //print(bubbleSort([3,6,7,2,1], <))
 //print(bubbleSort([3,6,7,2,1], <))
 //print(selectionSort([3,6,7,2,1], <))
-var array = [3,6,2,4,1]
-quickSort(arr: &array)
+//quickSort:
+//var array = [3,6,2,4,1]
+//quickSort(arr: &array)
 
+//Bag:
+//var bag = Bag<String>()
+//bag.add(item: "martin")
+//bag.add(item: "leandro")
+//bag.add(item: "tomona")
+//
+//print(bag.isEmpty())
+//print(bag.count)
+//for i in bag {
+//    print(i)
+//}
+//
+//print(bag)
+
+//Stack:
+//var stack = Stack<String>()
+//stack.push(item: "leandro")
+//stack.push(item: "derrick")
+//print(stack.count)
+//for i in stack {
+//    print(i)
+//}
+//stack.pop()
 
 //Mini Project -> TreeFiles:
 //fileExistsTest()
@@ -30,3 +54,7 @@ quickSort(arr: &array)
 //
 //numbers = fileSystemCrawler(at: URL(fileURLWithPath: FileManager.default.currentDirectoryPath), 0, "\t├─", &nFiles, &nFolders)
 //print("\n\(numbers[0] - 1) directories, \(numbers[1]) files\n")
+
+//substring search:
+print(searchKMP(text: "whereistheneedleand needle", pattern: "needle"))
+print(searchRabinKarp(text: "whereistheneedleand needle", pattern: "needle"))
