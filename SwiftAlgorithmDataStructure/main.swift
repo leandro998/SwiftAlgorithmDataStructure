@@ -56,5 +56,10 @@ import Foundation
 //print("\n\(numbers[0] - 1) directories, \(numbers[1]) files\n")
 
 //substring search:
-print(searchKMP(text: "whereistheneedleand needle", pattern: "needle"))
-print(searchRabinKarp(text: "whereistheneedleand needle", pattern: "needle"))
+//print(searchKMP(text: "inaystackneedlelina needle", pattern: "needle"))
+
+//FindElements:
+//largestElements(size: 3)
+//A(m: 3)
+
+findParent()

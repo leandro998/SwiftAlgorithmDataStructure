@@ -4,8 +4,6 @@
 //
 //  Created by Agamenon Rocha Dos Santos on 12/07/20.
 //  Copyright © 2020 Agamenon. All rights reserved.
-//  Created by Leandro Prado on 2020-07-14.
-//  Copyright © 2020 Leandro Prado. All rights reserved.
 //
 
 import Foundation

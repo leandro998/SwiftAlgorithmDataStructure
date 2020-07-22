@@ -33,9 +33,9 @@ func postOrder(_ node: Int) {
 var tree = [[Int]](repeating: [Int](repeating: 0, count: 2), count: 26)
 
 func treeTraversals() {
-    
     //get user input:
     let n = Int(readLine()!)!
+    
     for _ in 0..<n {
         let nodeInfo = readLine()!.split(separator: " ").map { String($0) }
         // A, B, C ... Z
