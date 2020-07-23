@@ -62,4 +62,5 @@ import Foundation
 //largestElements(size: 3)
 //A(m: 3)
 
-findParent()
+
+repeatingSequence(num: 57)
