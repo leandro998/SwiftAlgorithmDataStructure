@@ -62,5 +62,6 @@ import Foundation
 //largestElements(size: 3)
 //A(m: 3)
 
+//Assignments:
+//Sushi()
 
-repeatingSequence(num: 57)
